@@ -4,6 +4,8 @@ const ellipseHeight = 75;
 let ellipseY;
 let clickCount = 0;
 let speed;
+
+window.alert('Click the circle as fast as you can!');
 function setup () {
     createCanvas(500, 500);
     ellipseY = random(height - ellipseHeight);
@@ -13,7 +15,7 @@ function setup () {
 function draw () {
     background('lightSalmon');
     drawShape();
-    ellipseX++;
+    ellipseX+= speed;
     if(ellipseX > width) {
         noLoop();
         fill('green');
