@@ -15,7 +15,7 @@ const gameState = {
 let cardback;
 let cardfaceArray = [];
 function preload() {
-    cardback = loadImage('images/cardback2.png');
+    cardback = loadImage('images/cardback3.png');
     cardfaceArray = [
         loadImage('images/bird3.png'),
         loadImage('images/deer2.png'),
@@ -28,7 +28,7 @@ function preload() {
     ]
 }
 function setup() {
-    createCanvas(1000, 1000);
+    createCanvas(940, 1000);
     let selectedFaces = [];
     for (let z = 0; z < 8; z++) {
         const randomIdx = floor(random(cardfaceArray.length));
@@ -50,25 +50,38 @@ function setup() {
         }
         // new row starting location/spacing
         startingY += 195;
-        startingX = 75;   
+        startingX = 75;  
     }
 }
+
 function draw () {
-    background('midnightblue');
-    fill('Tomato');
+    background(color(36,57,77));
+    cursor('images/mouse1.png');
+    fill(color(236,136,114));
     textSize(35);
     textFont('Viaoda Libre');
-    text('Megan\'s Memory Game', 340, 50);
-    text('of Scandinavian Folk Animals', 300, 100);
-    text('Time remaining:', 65, 170);
-    text('Score:', 750, 170);
+    text('Megan\'s Memory Game', 300, 50);
+    text('of Scandinavian Folk Animals', 260, 100);
+    textSize(36);
+    text('attempts '+ gameState.attempts, 670, 170);
+    text('matches ' + gameState.numMatched, 85, 170);
     if (gameState.numMatched === gameState.totalPairs) {
-        fill('yellow');
+        fill(color(217,193,118));
         textSize(66);
-        text('You Win!!', 400, 170);
+        text('You Win!!', 320, 170);
         noLoop();
+    } else {
+        fill(color(217,193,118));
+        textSize(66);
+        text('Find a Match', 280, 170);
     }
-    //if card is matched false, then we will cards will return to cardback 
+    // if (gameState.numMatched === gameState.totalPairs) {
+    //     fill(color(217,193,118));
+    //     textSize(66);
+    //     text('You Win!!', 320, 170);
+    //     noLoop();
+    // }
+    //if card is matched false, then we will cards will return to cardback
     for (let k = 0; k < cards.length; k++) {
         if (!cards[k].isMatch) {
             cards[k].face = DOWN;
@@ -78,10 +91,6 @@ function draw () {
     noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
-    fill(255);
-    textSize(36);
-    text('attempts '+ gameState.attempts, 750, 100);
-    text('matches ' + gameState.numMatched, 100, 100);
 }
 function mousePressed () {
     if (gameState.waiting) {
@@ -97,7 +106,7 @@ function mousePressed () {
     }
     if (gameState.flippedCards.length === 2) {
         gameState.attempts++;
-        if (gameState.flippedCards[0].cardfaceImg === gameState.flippedCards[1].cardfaceImg) {
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
             // Cards Match! Mark cards as matched so they don't flip back
             gameState.flippedCards[0].isMatch = true;
             gameState.flippedCards[1].isMatch = true;
@@ -141,7 +150,7 @@ class Card {
     }
     //create defined area for mouse pressed, if inside rect = true, if outside = false
     didHit (mouseX, mouseY) {
-        if (mouseX >= this.x && mouseX <= this.x + this.width && 
+        if (mouseX >= this.x && mouseX <= this.x + this.width &&
             mouseY >= this.y && mouseY <= this.y + this.height) {
                 this.flip();
                 return true;
@@ -158,11 +167,11 @@ class Card {
     this.show();
     }
 }
-// RANDOM SHUFFLE 
+// RANDOM SHUFFLE
 function shuffleArray (cardArray) {
     let counter = cardArray.length;
     while (counter > 0) {
-        // pick random idx 
+        // pick random idx
         const idx = Math.floor(Math.random() * counter);
         // decrease counter by 1 (decrement)
         counter--;
