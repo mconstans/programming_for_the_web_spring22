@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="myApp">
+      <h1>{{message}}</h1>
+      <div class="container">
+      <h2>{{llamaFacts}}</h2>
+        <ol>
+            <li>{{llamaBite}}</li>
+            <li>{{llamaSpit}}</li>
+            <li>{{llamaTherapy}}</li>
+            <li>{{llamaPoop}}</li>
+            <li>{{llamaBabies}}</li>
+            <li>{{llamaGuard}}</li>
+            <li>{{llamaWeight}}</li>
+            <li>{{llamaPecking}}</li>
+            <li v-if="llamaGroups==true">Llamas are very social, they live in herds and will even adopt goats into their group.</li>
+            <li v-if="llamaSmell!==true">Llamas sing to communicate.</li>
+            <li v-else>Llamas hum to communicate.</li>
+        </ol>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
