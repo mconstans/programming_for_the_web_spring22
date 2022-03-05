@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="llama-list">
+    <h1 class="llama-list-title">What to name your next llama</h1>
+    <div class="list-container">
+      <div class="list-head">
+        <span class="rank">Rank</span>
+        <span class="name">Name</span>
+      </div>
+
+      <div 
+        v-for="(item, index) in llamas"
+        v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !== 0}"
+      >
+        <span class="list-rank"><h2>{{item.rank}}</h2></span>
+        <span class="list-name" v-bind:class="{highlight: item.name.toLowerCase().includes('llama')}"><h2>{{item.name}}</h2></span>
+        
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="llamas.js"></script>
+</body>
+
+</html>
