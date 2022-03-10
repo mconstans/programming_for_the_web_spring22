@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Exercise 8.1 Alpaca Fan Club Registration</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <form>
+            <fieldset>
+                <legend>Fan Club Registration</legend>
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" v-model="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" v-model="lastName">
+                </div>
+                <div>
+                    <label for="streetAddress">Street Address</label>
+                    <input id="streetAddress" v-model="streetAddress">
+                </div>
+                <div>
+                    <label>State</label>
+                    <select name="" id=""
+                    v-model="state">
+                    <option v-for="state in availableStates" 
+                    v-bind:value="state.value">{{state.name}}
+                    </option>
+                    </select>
+                </div>
+                <div>
+                    <label>Country</label>
+                    <input type="text" maxlength="3" v-model="country">
+                </div>
+                <div class="alpaca-color">
+                    <p>Favorite Alpaca Colors</p>
+                    <div>
+                        <ul>
+                            <li v-for="color in color">                        
+                                <label 
+                                v-bind:for="color.value">
+                                <input 
+                                type="checkbox" 
+                                name=""
+                                v-model="selectedColors"
+                                v-bind:id="color.value" 
+                                v-bind:value="color.value">{{color.name}}
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="alpaca-status">
+                    <label>Alpaca Status</label>
+                    <textarea name="" id="" cols="30" row="10"
+                    v-model="status"></textarea>
+                </div>
+            </fieldset>
+                <div class="output">
+                    <h3>Output</h3>
+                    <!-- outputting first name that is tied to firstName via v-model -->
+                    First Name: {{firstName}} <br>
+                    Last Name: {{lastName}} <br>
+                    Street Address: {{streetAddress}} <br>
+                    State: {{state}} <br>
+                    Color: {{selectedColors}}<br>
+                    Status: {{status}} <br>
+                </div>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+</body>
+</html>
