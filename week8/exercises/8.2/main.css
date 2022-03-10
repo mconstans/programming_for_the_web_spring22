@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(199, 198, 198);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#calcApp {
+    background-color: salmon;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 40px;
+    padding: 20px;
+}
+.numBox {
+    padding: 10px 10px 10px 0px;
+}
+button {
+    background-color: rgb(221, 221, 161);
+    border: none;
+}
