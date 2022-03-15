@@ -1,0 +1,73 @@
+[v-cloak] {
+    display: none;
+}
+body {
+    background-image: url("images/llama_0009_10.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: gainsboro;
+    font-family: 'Playfair Display', serif;
+}
+.header {
+    background-color: seashell;
+}
+h1 {
+    color: maroon;
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 40px;
+}
+h2 {
+    color: maroon;
+    font-size: 40px;
+    padding-left: 30px;
+}
+h3 {
+    color: olive;
+    font-size: 30px;
+    padding-left: 30px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 375px;
+    border-radius: 8px;
+}
+
+/* .color-red {
+    background: seashell;
+    padding: 40px;
+} */
+button {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.is-loading { 
+    background: green;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-container-element { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    border: 1px solid black; 
+    width: 100%; 
+} 
+.grid-child-element { 
+    margin: 10px; 
+    border: 1px solid red;
+    background-color: seashell;
+}
+
+li {
+    padding-left: 10px;
+    color: olive;
+    font-size: 18px;
+    line-height: 180%;
+}

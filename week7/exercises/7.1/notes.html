@@ -1,0 +1,17 @@
+        <!-- should have examples of both style binding and class binding -->
+        inline binding
+        <!-- <li v-bind:style="{background: 'yellow'}">Hello</li>
+        inline binding
+        <li v-bind:style="[baseStyle, overRideStyle]">Hello</li> -->
+        class binding
+        <li v-bind:class="{active: currentRoute==='home'}">Class binding</li>
+
+
+        <ul>
+                <li v-bind:style="baseStyle">Their ears: Alpaca ears have short spear-shaped ears while llamas have much longer, banana-shaped ears.</li>
+                <li v-bind:style="alternateStyle">Their size: Alpacas generally weigh in at around 150 pounds while llamas can get as heavy as 400 pounds. At the shoulder, an average alpaca stands between 34 and 36 inches, while a llama generally ranges between 42 and 46 inches.</li>
+                <li v-bind:style="baseStyle">Their size: Alpacas generally weigh in at around 150 pounds while llamas can get as heavy as 400 pounds. At the shoulder, an average alpaca stands between 34 and 36 inches, while a llama generally ranges between 42 and 46 inches.</li>
+                <li v-bind:style="alternateStyle">Their purpose: For more than 5,000 years alpacas have been bred for fiber (and in Peru for meat as well), while llamas have been bred for the same amount of time as pack animals and meat.</li>
+                <li v-bind:style="baseStyle">Their hair: The alpaca produces a much finer fiber than the llama. The alpaca also produces more fleece than its larger cousin and in a much greater variety of colors. Llamas also generally do not have as much hair on their head and face as alpacas do.</li>
+                <li v-bind:style="alternateStyle">Their dispositions: Alpacas are very much herd animals, while llamas are more independent minded. Alpacas also tend to be a bit more skittish than llamas, which are often used as guard animals for alpacas, sheep, and other small livestock.</li>
+            </ul>

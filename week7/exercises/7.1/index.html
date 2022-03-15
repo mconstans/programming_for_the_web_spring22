@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llamas vs Alpacas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+        <div id="myApp" v-cloak>
+            <!-- Header -->
+            <div class="header">
+            <h1>Llamas vs Alpacas....</h1>          
+            <h2>What's the real difference anyway?</h2>
+            <div class="factsAboutLlamas">
+                <h3 :class="className">Llama facts</h3>
+                <img src="images/alpaca_vs_llama_large.png">
+            </div>
+            </div>
+        <div class="grid-container-element">
+            <!-- Llama div: definition & basic facts -->
+            <div class="grid-child-element purple">Llamas
+                <ul>
+                    <li>Llamas have coarse hair</li>
+                    <li>Llamas are independent creatures</li>
+                    <li>Llamas have a long face</li>
+                    <li>Llamas have long, curvy, banana-shaped ears</li>
+                </ul>
+                <p>To learn more about llamas, <a v-bind:href="llamaLand">visit Wikipedia</a></p>
+            </div>
+            <!-- Alpaca div: definition & basic facts -->
+            <div class="grid-child-element green">Alpacas
+                <ul>
+                    <li>Alpacas have a soft, fine coat of hair</li>
+                    <li>Alpacas are herd-like animals</li>
+                    <li>Alpacas have a shorter, smooshed face</li>
+                    <li>Alpacas have short, pointy ears</li>
+                </ul>
+                <p>To learn more about alpacas, <a v-bind:href="alpacaLand">visit Wikipedia</a></p>
+            </div>
+        </div>
+        <button :class="{'is-loading': isLoading }" @click="toggleClass">Toggle Me</button>
+        <script src="script.js"></script>
+        </div>
+    </body>
+</html>
