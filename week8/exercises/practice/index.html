@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Basic forms</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div class="container">
+            <h1>{{title}}</h1>
+            <div class="newItem">
+                <!-- it's a good idea for labels and ids to match for accessibility -->
+                <label for="newTodo">Add an item</label>
+                <input v-model="newItem" type="text" id="newTodo">
+                radio button method
+                <label for="">Priority Level</label>
+                <input v-model="newItemPriority" type="radio" value="low"><label>Low</label>
+                <input v-model="newItemPriority" type="radio" value="low"><label>Medium</label>
+                <input v-model="newItemPriority" type="radio" value="low"><label>High</label>
+                <!-- selection dropdown menu method, since we have low set in .js - drowdown will default to low -->
+                <!-- <label for="">Priority Level</label> -->
+                <!-- <select v-model="newItemPriority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select> -->
+                <!-- checkbox html structure -->
+                <!-- <label for="|"><input v-model="newItemHighPriority" type="checkbox" id="newTodoPriority">High Priority</label> -->
+            </div>
+            <div class="output">
+                <br>
+                <small>Items to add</small>
+                <br>
+                {{newItem}}
+                <br>
+                Priority Level {{newItemPriority}}
+                <div class="tags">Tags {{tags}}</div>
+                <!-- checkbox html structure -->
+                <!-- Is high priority {{newItemHighPriority}} -->
+            </div>
+            <ul>
+            <li v-for="todo in todoItems" key="todo.id" class="card m-2 p-2">{{todo.label}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
