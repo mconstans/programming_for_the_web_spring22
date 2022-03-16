@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Pyrex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Megan's Vintage Pyrex Bakeware Collection</h1>
+        <img class="centerimg" src="images/vintage-pyrex-lead.jpeg">
+        <table>
+            <tr>
+                <th>Pattern Image</th>
+                <th>Pattern Name</th>
+                <th>Years Released</th>
+                <th>Pattern Classification</th>
+                <th>Origins</th>
+                <th>Collected</th>
+            </tr>
+            <tr v-for="(pattern, index) in patterns" v-bind:class="{'non-standard': pattern.classType !== 'standard'}">
+                <td><img :src="pattern.image"></td>
+                <td>{{pattern.patternName}}</td>
+                <td>{{pattern.yearsReleased}}</td>
+                <td>{{pattern.classType}}</td>
+                <td><a class="patternName" :href="pattern.link">{{pattern.patternName}}</a></td>
+                <td>{{pattern.collected}}</td>
+            </tr>
+        </table>
+        <form v-on:submit.prevent="submitHandler">
+            <fieldset>
+                <legend>Add a pattern to the collection</legend>
+                <div>
+                    <label for="image">Pattern Image</label>
+                    <input id="image" type="text" v-model="newPatternObj.image">
+                </div>
+                <div>
+                    <label for="patternName">Pattern Name</label>
+                    <input id="patternName" type="text" v-model="newPatternObj.patternName">
+                </div>
+                <div>
+                    <label for="yearsReleased">Years Released</label>
+                    <input id="yearsReleased" type="text" v-model="newPatternObj.yearsReleased">
+                </div>
+                <div>
+                    <label for="classType">Pattern Classification</label>
+                    <input id="classType" type="text" v-model="newPatternObj.classType">
+                </div>
+                <div>
+                    <label for="collected">Pattern Collected</label>
+                    <input id="collected" type="checkbox" v-model="newPatternObj.collected">
+                </div>
+                <button type="submit">Submit</button>                                
+            </fieldset>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

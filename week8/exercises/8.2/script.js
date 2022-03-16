@@ -29,4 +29,4 @@ let vm = Vue.createApp({
             vm.firstNum = vm.secondNum = null;
             }
         }
-}).mount('#calcApp')
+}).mount('#calcApp');
