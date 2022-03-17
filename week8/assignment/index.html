@@ -22,6 +22,7 @@
                 <th>Pattern Classification</th>
                 <th>Origins</th>
                 <th>Collected</th>
+                <th>Action</th>
             </tr>
             <tr v-for="(pattern, index) in patterns" v-bind:class="{'non-standard': pattern.classType !== 'standard'}">
                 <td><img :src="pattern.image"></td>
@@ -30,9 +31,10 @@
                 <td>{{pattern.classType}}</td>
                 <td><a class="patternName" :href="pattern.link">{{pattern.patternName}}</a></td>
                 <td>{{pattern.collected}}</td>
+                <td><button type="button" v-on:click="deleteItem(pattern)">Delete</button></td>
             </tr>
         </table>
-        <form v-on:submit.prevent="submitHandler">
+        <form v-on:submit.prevent="submitHandler" class="newPatternForm">
             <fieldset>
                 <legend>Add a pattern to the collection</legend>
                 <div>
@@ -50,6 +52,10 @@
                 <div>
                     <label for="classType">Pattern Classification</label>
                     <input id="classType" type="text" v-model="newPatternObj.classType">
+                </div>
+                <div>
+                    <label for="link">Link to Pattern History</label>
+                    <input id="link" type="text" v-model="newPatternObj.link">
                 </div>
                 <div>
                     <label for="collected">Pattern Collected</label>

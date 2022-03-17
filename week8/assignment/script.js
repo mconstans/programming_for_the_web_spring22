@@ -1,6 +1,6 @@
 // create new Vue 3
 
-Vue.createApp({ 
+const vm = Vue.createApp({ 
     data(){
       return {
         newPatternObj: {
@@ -107,6 +107,21 @@ Vue.createApp({
     methods: {
         submitHandler: () => {
             console.log('submitted');
+            vm.patterns = vm.patterns.concat(vm.newPatternObj);
+            vm.resetForm();
+        },
+        resetForm: () => {
+          vm.newPatternObj = {
+            image: '',
+            patternName: '',
+            yearsReleased: null,
+            classType: '',
+            link: '',
+            collected: 'Collected'
+          };
+        },
+        deleteItem: item => {
+          vm.patterns = vm.patterns.filter(pattern => {return pattern !== item;})
         }
     }
   }).mount("#app")
