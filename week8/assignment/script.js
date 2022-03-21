@@ -3,6 +3,8 @@
 const vm = Vue.createApp({ 
     data(){
       return {
+        classType: "promotional",
+        classType: "standard",
         newPatternObj: {
             image: '',
             patternName: '',

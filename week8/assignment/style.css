@@ -2,6 +2,7 @@
     box-sizing: border-box;
   }
   #app {
+    background-image: url("images/Roofdog-04Atomic-starbursts-blue-orange.jpg");
     padding: 5%;
     box-shadow: 5px 10px 8px 10px #888888;
     border-radius: 10px;
@@ -19,16 +20,17 @@
     font-weight: 800;
     letter-spacing: .5rem;
     text-align: center;
-    color: #78eded;
+    color: #499c9c;
+    text-shadow: #888888;
   }
   table, thead, tbody, th, tr, td {
     /* border-collapse: collapse; */
     /* border-spacing: 0; */
     border-radius: 30px;
   }
-tr {
+/* tr {
   border: 1px solid red;
-}
+} */
   th {
     background: #e4e4e4;
     padding: 20px;
@@ -38,8 +40,7 @@ tr {
     text-align: left;
   }
   td {
-    /* background-color: rgb(231, 231, 231); */
-    /* border: 1px solid grey; */
+    border: 1px solid grey;
     border-radius: 30px;
     padding: 15px;
     padding-right: 40px;
@@ -50,7 +51,7 @@ tr {
     align-items: center;
     width: 200px;
     border-radius: 30px;
-    border: 1px solid grey;
+
   }
   .centerimg {
     display: block;
@@ -60,11 +61,7 @@ tr {
     width: 375px;
     border-radius: 30px;
 }
-  .standard {
-    background-color: red;
-  }
   .non-standard {
-    border: 1px solid red;
     border-radius: 30px;
       background: #daeceb;
   }

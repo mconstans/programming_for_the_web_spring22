@@ -28,7 +28,7 @@
                 <td><img :src="pattern.image"></td>
                 <td>{{pattern.patternName}}</td>
                 <td>{{pattern.yearsReleased}}</td>
-                <td>{{pattern.classType}}</td>
+                <td v-bind:class="{active : classType==='promotional'}">{{pattern.classType}}</td>
                 <td><a class="patternName" :href="pattern.link">{{pattern.patternName}}</a></td>
                 <td>{{pattern.collected}}</td>
                 <td><button type="button" v-on:click="deleteItem(pattern)">Delete</button></td>
