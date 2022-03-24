@@ -1,4 +1,5 @@
 <script setup>
+import CamelidRow from "../src/components/CamelidRow.vue";
   const camelids = [
       {
         commonName: "Lama",
@@ -24,17 +25,15 @@
 <template>
 <div>
   <h1>This will be my Camelids Page</h1>
-  <div v-for="critter in camelids" v-bind:key="critter.binomialName">
-    <h3> Common Name </h3>
-      <p>Binomial Name</p>
-      <p>Family</p>
-      <p>Genus</p>
-      <p>Species</p>
-      <img src="placeholder" alt="placeholder"/>
-      </div>
+  <div class="camelid-container">
+      <CamelidRow v-for="critter in camelids" v-bind:key="critter.commonName" v-bind:animal="critter"/>
+  </div>
 </div>
 </template>
 
 <style>
-
+.camelid-container {
+  display: flex;
+  flex-direction: row;
+}
 </style>
