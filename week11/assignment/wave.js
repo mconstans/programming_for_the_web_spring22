@@ -21,7 +21,3 @@ function setup() {
         }
     }
   }
-  //save the canvas as an image
-function mouseClicked() {
-    saveCanvas('flowfield', 'png')
-}

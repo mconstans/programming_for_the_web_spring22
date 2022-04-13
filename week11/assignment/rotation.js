@@ -17,7 +17,3 @@ function draw() {
     noLoop();
      }
 }
-//save the canvas as an image
-function mouseClicked() {
-    saveCanvas('flowfield', 'png')
-}
