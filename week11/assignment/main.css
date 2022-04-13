@@ -1,0 +1,23 @@
+html {
+    background: salmon;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+h1 {
+    font-size: 3rem;
+}
+nav {
+    background: rgb(34, 47, 110);
+    padding: 20px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color:aquamarine;
+    text-decoration: overline;
+}
+img {
+    max-width: 200px;
+}
