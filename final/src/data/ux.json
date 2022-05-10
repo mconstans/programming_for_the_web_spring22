@@ -1,0 +1,32 @@
+[
+  {
+    "id": 5,   
+    "image": "images/MN-Wild-Mockuplarge.png",
+    "projectName": "Minnesota Wild Redesigned - Mobile App",
+    "projectDate": "Fall 2021",
+    "projectCategory": "UX Design",
+    "projectStatement": "Minnesota Wild Redesign with accessibility in mind. The goal for this project was to redesign the Minnesota Wild site to be fully accessible to users with vision impairments.",
+    "projectChallenges": "Many individuals with vision impairments may struggle to navigate the NHL website with its small print, poor contrast, and to interpret data that is too heavily reliant on color. It is a challenge to find pertinent information or perform simple tasks such as purchasing tickets or finding the dates of upcoming games because of these poor design choices.",
+    "projectSolutions": "To provide a streamlined, clean and accessible web browsing experience for individuals with vision impairments. Checking the latest scores or the date of the upcoming games or simply booking a ticket shouldn’t have to be a struggle. By simplifying content, reducing extensive scrolling and providing better color contrast, we can create a better user experience not just for visually impaired individuals but for all. Using colors in a more thoughtful manner not only provides more meaningful intentions but also improves clarity and helps the user better process information."
+  },
+  {
+    "id": 6,  
+    "image": "images/MovingApp.png",
+    "projectName": "Moving App",
+    "projectDate": "Spring 2022",
+    "projectCategory": "UX Design",
+    "projectStatement": "Design an app that allows users who are planning a move to search for rental trucks/pods and other moving services and compare features & prices to find the best fit for their needs. The overall goal for this project was to design a mobile app from a user-centric point of view.  This included researching tasks, sketching, wire framing, paper prototyping, clickable prototyping, user testing, and a case study-like document.",
+    "projectChallenges": "Planning a move is stressful enough. Many people simply just don’t have time to spend hours researching to find the best prices or compare services of different companies. Users often are not sure of the size moving vehicle they need to fit belongings and need help selecting the correct size. Rental companies do not always show images of the product you are renting or have details diagrams of its size. When users do find the right vehicle, they are often unsure whether they are getting the best prices.",
+    "projectSolutions": "To combat these problems, a moving calculator app was created to allow users to add home items to the truck that will then calculate the total volume of space these items take up."
+  },
+  {
+    "id": 7,  
+    "image": "images/wellnesswithin.png",
+    "projectName": "Wellness Within Website",
+    "projectDate": "Fall 2020",
+    "projectCategory": "UX Design",
+    "projectStatement": "The overall goal for this project was to create a functional website for a customer's professional wellness coaching business",
+    "projectChallenges": "It was a challenge to code a beautiful and engaging website that was responsive on both web and mobile devices",
+    "projectSolutions": "Starting from a mobile-first design approach, the site was sketched out before prototyping in Figma to show customer. After approval, the designs were translated to desktop layout and coded."
+  }
+  ]

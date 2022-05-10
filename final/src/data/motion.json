@@ -1,0 +1,32 @@
+[
+  {
+    "id": 9,
+    "image": "images/wander.png",
+    "projectName": "Animated Nature Scene",
+    "projectDate": "Fall 2020",
+    "projectCategory": "Motion Design",
+    "projectStatement": "This project was my first foray into animating vector graphic scenes",
+    "projectChallenges": "Mimicing nature proved to be a challenge every designer will face",
+    "projectSolutions": "Learning natural rhythms and watching time-lapse photography videos of the elements in my scene such as rotating stars and swaying trees were the inspiration for my timing sequences in my video"
+  },
+  {
+    "id": 10,  
+    "image": "images/intro.png",
+    "projectName": "Introduction Video",
+    "projectDate": "Fall 2021",
+    "projectCategory": "Motion Design",
+    "projectStatement": "This project focused on learning to create introductory scenes that catch the eye for motion animation",
+    "projectChallenges": "Learning to use AdobeAfter effects to manipulate scenes",
+    "projectSolutions": "I spent countless hours studying AfterEffects animation through online courses and watching youtube videos for inspiration and small project ideas."
+  },
+  {
+    "id": 11,
+    "image": "images/sustainability.png",
+    "projectName": "My Practice Video",
+    "projectDate": "Fall 2021",
+    "projectCategory": "Motion Design",
+    "projectStatement": "The goal for this project was create a video detailing what my future design practice will look like including my values, aspirations and design tenets",
+    "projectChallenges": "It was a challenge to create my own animations that hold visual attention and represent what I was trying to communicate",
+    "projectSolutions": "I spent countless hours researching various animations and coming up a strategy for my own pieces"
+  }
+  ]
